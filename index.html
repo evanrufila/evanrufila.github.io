@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div class="background">
+
+<div class="nav">
+	<a class="a active" href="#">HOME</a>
+	<a class="b" href="#">ABOUT ME</a>
+	<a class="c" href="#">GALLERY</a>
+	<a class="d" href="#">CONTACTS</a>
+</div>
+
+<div class="content">
+	
+	<div class="home">
+		<h1>I'm Dale Rufila</h1>
+		<h3>IT Student</h3>
+	</div>
+
+	<div class="aboutme">
+		<p><b>Hello Everyone,</b><br>
+		Welcome to my <b>Website(MyProfile)</b> <br>
+		This website will talk all about myself. It contains a short introduction of myself, some of my images, and my different social media accounts. I'm also looking for any opportunities and learnings to come. <br>
+		If you are interested you can contact me in my social media accounts. </p>
+		<p>My name is Dale Evan I. Rufila. I am a dedicated, organized and methodical individual. I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills. I am reliable and dependable and often seek new responsibilities within a wide range of employment areas. I have an active and dynamic approach to work and getting things done. I am determined and decisive. I identify and develop opportunities. </p>
+	</div>
+
+	<div class="gallery">
+		<div class="image">
+			<img src="images/1.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/2.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/3.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/4.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/5.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/6.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/7.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/8.jpg"/>		
+		</div>
+		<div class="image">
+			<img src="images/9.jpg"/>		
+		</div>
+	</div>
+
+	<div class="contacts">
+
+		<div class="image"><a href="https://www.facebook.com/dalexxv/" target="_blank">
+			<img src="images/fblogow.png"/>	</a>	
+		</div>
+		<div class="image"><a href="https://www.instagram.com/dalexxv/" target="_blank">
+			<img src="images/iglogo.png"/>	</a>	
+		</div>
+		<div class="image"><a href="https://www.youtube.com/channel/UCljlsDCp7K_Y254YqIToSvQ" target="_blank">
+			<img src="images/ytlogo.png"/>	</a>	
+		</div>
+</div>
+
+</div>
+
+
+<script type="text/javascript" src=js/jquery-3.2.1.min.js></script>
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('a').click(function(){
+			//alert("i am click");
+			var selected = $(this);
+			$('a').removeClass('active');
+			$(selected).addClass('active');
+		});
+
+		var $a = $('.a'),
+		$b = $('.b'),
+		$c = $('.c'),
+		$d = $('.d'),
+		$home = $('.home'),
+		$aboutme = $('.aboutme'),
+		$gallery = $('.gallery'),
+		$contacts = $('.contacts');
+		
+		$a.click(function(){
+			$home.fadeIn();
+			$aboutme.fadeOut();
+			$gallery.fadeOut();
+			$contacts.fadeOut();
+		});
+		$b.click(function(){
+			$aboutme.fadeIn();
+			$home.fadeOut();
+			$gallery.fadeOut();
+			$contacts.fadeOut();
+		});
+		$c.click(function(){
+			$aboutme.fadeOut();
+			$home.fadeOut();
+			$gallery.fadeIn();
+			$contacts.fadeOut();
+		});
+		$d.click(function(){
+			$aboutme.fadeOut();
+			$home.fadeOut();
+			$gallery.fadeOut();
+			$contacts.fadeIn();
+		});
+ 	});
+</script>
+</body>
+</html>
